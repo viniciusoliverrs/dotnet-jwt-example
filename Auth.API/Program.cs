@@ -1,4 +1,6 @@
 using System.Text;
+using Auth.API.Data.Repositories;
+using Auth.API.Domain.Data.Repositories;
 using Auth.API.Utils.Constants;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -61,7 +63,7 @@ builder.Services.AddAuthentication(
     });
 
 builder.Services.AddCors();
-
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 var app = builder.Build();
 
 

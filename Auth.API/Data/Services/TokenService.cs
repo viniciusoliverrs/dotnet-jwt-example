@@ -1,17 +1,13 @@
-using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
-using Auth.API.Models;
+using Auth.API.Domain.Entities;
 using Auth.API.Utils.Constants;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Auth.API.Data.Services
 {
-    public static class TokenServices
+    public static class TokenService
     {
         public static string GenerateToken(User user)
         {
