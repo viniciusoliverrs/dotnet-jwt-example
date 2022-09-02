@@ -7,8 +7,8 @@ namespace Auth.API.Data.Repositories
     public class UserRepository : IUserRepository
     {
         private List<User> users = new List<User>() {
-            new User { Id = Guid.NewGuid(), Username = "manager", Password = "manager", Role = "manager" },
-            new User { Id = Guid.NewGuid(), Username = "employee", Password = "employee", Role = "employee" }
+            new User { Id = Guid.NewGuid(), Username = "robin", Password = "robin", Role = "manager" },
+            new User { Id = Guid.NewGuid(), Username = "batman", Password = "batman", Role = "employee" }
         };
         public void Add(User entity) => users.Add(entity);
 
